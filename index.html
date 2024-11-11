@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="apple-touch-icon" sizes="180x180" href="images/calculator-img.png">
+    <link rel="icon" type="image/png" href="images/calculator-img.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/calculator-img.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="images/calculator-img.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="stylesheet" href="style.css">
+    <title>Calculator</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Calculator</h1>
+        <div class="calculator">
+            <div class="display"></div>
+            <div class="button-row">
+                <div class="buttoncalculator" onclick="clearDisplay()">C</div>
+                <div class="buttoncalculator" onclick="backspace()" style="font-weight: bold;">⌦</div>
+                <div class="buttoncalculator" onclick="appendToDisplay('(')">(</div>
+                <div class="buttoncalculator" onclick="appendToDisplay(')')">)</div>
+                <div class="buttoncalculator operator" onclick="appendToDisplay('/')">&divide;</div>
+                <div class="buttoncalculator operator" onclick="appendToDisplay('*')">&times;</div>
+            </div>
+            <div class="button-row">
+                <div class="buttoncalculator" onclick="appendToDisplay('7')">7</div>
+                <div class="buttoncalculator" onclick="appendToDisplay('8')">8</div>
+                <div class="buttoncalculator" onclick="appendToDisplay('9')">9</div>
+                <div class="buttoncalculator operator" onclick="appendToDisplay('-')">&minus;</div>
+            </div>
+            <div class="button-row">
+                <div class="buttoncalculator" onclick="appendToDisplay('4')">4</div>
+                <div class="buttoncalculator" onclick="appendToDisplay('5')">5</div>
+                <div class="buttoncalculator" onclick="appendToDisplay('6')">6</div>
+                <div class="buttoncalculator operator" onclick="appendToDisplay('+')">+</div>
+            </div>
+            <div class="button-row">
+                <div class="buttoncalculator" onclick="appendToDisplay('1')">1</div>
+                <div class="buttoncalculator" onclick="appendToDisplay('2')">2</div>
+                <div class="buttoncalculator" onclick="appendToDisplay('3')">3</div>
+                <div class="buttoncalculator operator" onclick="calculate()">=</div>
+            </div>
+            <div class="button-row">
+                <div class="buttoncalculator zero" onclick="appendToDisplay('0')">0</div>
+                <div class="buttoncalculator" onclick="appendToDisplay('.')">.</div>
+            </div>
+            <div class="scratch-pad"></div>
+            <div class="external-link">
+                <a href="./index-fr.html">🇫🇷 Version</a>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
