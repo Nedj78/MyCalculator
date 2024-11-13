@@ -12,4 +12,4 @@ __Backend host server__: no
 
 __Frontend host servers__: 
 - [jekyll (Github pages)](https://nedj78.github.io/MyCalculator/)
-- [now (Vercel platform)]([https://myconvertor.vercel.app/](https://my-calculator-blue.vercel.app/)
+- [now (Vercel platform)](https://myconvertor.vercel.app/](https://my-calculator-blue.vercel.app/)
