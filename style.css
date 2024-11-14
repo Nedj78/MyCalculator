@@ -27,7 +27,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    min-height: 100vh;
+    min-height: 96vh;
 }
 
   span {
@@ -145,11 +145,12 @@
     text-align: left; 
     max-width: 100%; 
     overflow-wrap: break-word; 
+    max-width: 18vw;
     font-family: Gloria Hallelujah, Cochin, Georgia, Times, 'Times New Roman', serif;
   }
 
   .scratch-pad div {
-    height: 2vh; 
+    height: 6vh; 
     border-radius: 5px;
     padding-right: 10px; 
     box-sizing: border-box;
@@ -236,8 +237,21 @@
     width: 140%;
   }
 
+  .scratch-pad {
+    max-width: 40vw;
+  }
+
+  .scratch-pad p { 
+    max-width: 17vw;
+    overflow-wrap: break-word; 
+  }
+
   .scratch-pad span {
-    margin: -40px 0 0 198px;
+    margin: -40px 0 0 290px;
+  }
+
+  .scratch-pad div {
+    height: 6vh; 
   }
 
   h1 {
@@ -257,7 +271,7 @@
   }
 
   .display {
-    font-size: 24px;
+    font-size: 40px;
   }
 
   .button-row {
@@ -277,7 +291,12 @@
   }
 
   .scratch-pad span {
-    margin: -40px 0 0 260px;
+    margin: -40px 0 0 273px;
+  }
+
+  .scratch-pad p { 
+    max-width: 50vw;
+    overflow-wrap: break-word; 
   }
 
   .buttoncalculator {

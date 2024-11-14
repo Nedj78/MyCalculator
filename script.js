@@ -75,7 +75,7 @@
         <div>
           <p>${item}</p>
           <span class="delete-calcul" data-index="${index}">&#x2718;</span>
-        </div>`;
+        </div><br>`;
     });
     
     scratchPad.innerHTML = scratchPadHTML;
