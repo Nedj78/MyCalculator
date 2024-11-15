@@ -65,7 +65,7 @@
         <section id="scratchpad-content">
           <h2>Brouillon</h2>
           <button class="clear-results" onclick="deleteResults()">Tout effacer</button>
-          <br><br>
+          <br>
         </section>`;
     }
   
@@ -100,14 +100,3 @@
     scratchPadText = [];
     updateScratchPad();
   }
-  
-  
-  // Add keydown event to inputs for conversion
-  inputs.forEach(input => {
-    input.addEventListener('keydown', function(event) {
-      if (event.keyCode === 13) {
-        event.preventDefault();
-        convert1();
-      }
-    });
-  });

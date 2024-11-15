@@ -65,7 +65,7 @@
         <section id="scratchpad-content">
           <h2>Draft Board</h2>
           <button class="clear-results" onclick="deleteResults()">Clear all</button>
-          <br><br>
+          <br>
         </section>`;
     }
   
@@ -75,7 +75,7 @@
         <div>
           <p>${item}</p>
           <span class="delete-calcul" data-index="${index}">&#x2718;</span>
-        </div><br>`;
+        </div>`;
     });
     
     scratchPad.innerHTML = scratchPadHTML;
@@ -102,13 +102,4 @@
   }
   
   
-  // Add keydown event to inputs for conversion
-  inputs.forEach(input => {
-    input.addEventListener('keydown', function(event) {
-      if (event.keyCode === 13) {
-        event.preventDefault();
-        convert1();
-      }
-    });
-  });
   
