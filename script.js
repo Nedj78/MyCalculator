@@ -2,6 +2,10 @@
   let scratchPad = document.querySelector('.scratch-pad');
   const inputs = document.querySelectorAll("#minute1, #minute2");
   const btn = document.getElementById('convertBtn');
+  const externalLink = document.querySelector('.external-link');
+
+  scratchPad.style.display = 'none';
+  externalLink.style.padding = '20px';
   
   let scratchPadText = [];
   let lastResult = null;
@@ -46,12 +50,13 @@
     display.innerHTML = result;
     if (lastResult === null) {
       scratchPadText.push(expression + ' = ' + result);
+      scratchPad.style.display = 'block';
     } else {
       scratchPadText.push(lastResult + ' ' + expression + ' = ' + result);
     }
     lastResult = result;
     updateScratchPad();
-  }
+  } 
   
   // ------------ DRAFT BOARD
   
@@ -85,6 +90,9 @@
       button.addEventListener('click', function() {
         const index = this.getAttribute('data-index');
         deleteItem(index);
+        if (scratchPadText.length === 0) {
+          scratchPad.style.display = 'none';
+        }
       });
     });
   }
@@ -97,7 +105,9 @@
   
   // Clear all results in scratch pad
   function deleteResults() {
-    scratchPadText = [];
+    scratchPadText = []; 
+    scratchPad.style.display = 'none';
+    externalLink.style.padding = '20px';
     updateScratchPad();
   }
   
