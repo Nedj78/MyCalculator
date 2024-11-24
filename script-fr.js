@@ -43,20 +43,40 @@
     updateScratchPad();
   }
   
-  // Perform calculation
+ 
   function calculate() {
     let expression = display.innerHTML;
-    let result = eval(expression);
-    display.innerHTML = result;
-    if (lastResult === null) {
-      scratchPadText.push(expression + ' = ' + result);
-      scratchPad.style.display = 'block';
-    } else {
-      scratchPadText.push(lastResult + ' ' + expression + ' = ' + result);
+
+    // Percentages management
+    if (expression.includes('%')) {
+        // Replace "nombre+nombre%" types expressions by par their equivalent
+        expression = expression.replace(/(\d+(\.\d+)?)\+(\d+)%/g, (match, base, _, percentage) => {
+            return `${base} + (${base} * ${percentage} / 100)`;
+        });
+
+        // Replace "nombre-nombre%" types expressions by par their equivalent
+        expression = expression.replace(/(\d+(\.\d+)?)\-(\d+)%/g, (match, base, _, percentage) => {
+            return `${base} - (${base} * ${percentage} / 100)`;
+        });
     }
-    lastResult = result;
-    updateScratchPad();
-  } 
+
+    try {
+        // Expression calcul
+        let result = eval(expression);
+        display.innerHTML = result;
+
+        if (lastResult === null) {
+            scratchPadText.push(expression + ' = ' + result);
+            scratchPad.style.display = 'block';
+        } else {
+            scratchPadText.push(lastResult + ' ' + expression + ' = ' + result);
+        }
+        lastResult = result;
+        updateScratchPad();
+    } catch (error) {
+        display.innerHTML = "Error";
+    }
+}
   
   // ------------ DRAFT BOARD
   
