@@ -38,7 +38,7 @@
 
   .button {
       background-color: rgba(244, 147, 56, 0.366);
-      border-radius: 8px;
+      border-radius: 80px;
       block-size: 40px;
       inline-size: 100px;
       font-size: 16px;
@@ -88,14 +88,19 @@
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     font-weight: bold;
     text-align: center;
+    align-items: center;
     border: none;
-    border-radius: 5px;
+    border-radius: 50%;
     color: #222222ec;
     cursor: pointer;
-    font-size: 28px;
+    height: 90px;
+    width: 20px;
+    font-size: 35pt;
     flex-grow: 1;
     margin: 5px;
-    padding: 8px;
+    padding: 0;
+    display: inline-flex;
+    justify-content: center;
     transition: background-color 0.3s;
   }
 
@@ -110,6 +115,7 @@
 
   .zero {
     flex-basis: 52%;
+    border-radius: 50px;
   }
 
   .operator {
@@ -228,6 +234,13 @@
 
   .buttoncalculator {
     font-size: 45px;
+    height: 90px;
+    width: 20px;
+    border-radius: 50%;
+  }
+
+  .zero {
+    border-radius: 80px;
   }
 
   .clear-results {
@@ -301,7 +314,70 @@
   }
 
   .buttoncalculator {
-    font-size: 24px;
+    font-size: 50px;
+    height: 120px;
+    width: 30px;
+    border-radius: 50%;
+  }
+
+  .zero {
+    border-radius: 80px;
+  }
+
+  h1 {
+    font-size: 20px;
+  }
+}
+
+@media screen and (max-width: 426px) {
+  html {
+    font-size: 14pt;
+    overflow: scroll;
+  }
+
+  .button {
+    margin-top: 10px;
+    inline-size: 120px;
+  }
+
+  .display {
+    font-size: 40px;
+  }
+
+  .button-row {
+    flex-wrap: wrap;
+  }
+
+  .calculator {
+    max-width: 90%;
+    width: 90%;
+  }
+
+  .scratch-pad {
+    margin-top: 20px;
+    margin-bottom: 20px;;
+    max-width: 75vw;
+    max-height: 25vh;
+  }
+
+  .scratch-pad span {
+    margin: -40px 0 0 256px;
+  }
+
+  .scratch-pad p { 
+    max-width: 50vw;
+    overflow-wrap: break-word; 
+  }
+
+  .buttoncalculator {
+    font-size: 28px;
+    height: 70px;
+    width: 30px;
+    border-radius: 50%;
+  }
+
+  .zero {
+    border-radius: 80px;
   }
 
   h1 {
@@ -348,7 +424,14 @@
   }
 
   .buttoncalculator {
-    font-size: 30px;
+    font-size: 28px;
+    height: 60px;
+    width: 30px;
+    border-radius: 50%;
+  }
+
+  .zero {
+    border-radius: 60px;
   }
 
   h1 {
