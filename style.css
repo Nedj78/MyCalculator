@@ -29,7 +29,7 @@
     padding: 30px 0 0 0;
     align-items: center;
     min-height: 96vh;
-}
+  }
 
   span {
     font-size: 15pt;
@@ -38,7 +38,7 @@
 
   .button {
       background-color: rgba(244, 147, 56, 0.366);
-      border-radius: 80px;
+      border-radius: 20%;
       block-size: 40px;
       inline-size: 100px;
       font-size: 16px;
@@ -62,7 +62,7 @@
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
     padding: 10px;
     margin: 0 auto; 
-}
+  }
 
   .display {
     background-color: #666;
@@ -90,7 +90,7 @@
     text-align: center;
     align-items: center;
     border: none;
-    border-radius: 50%;
+    border-radius: 10%;
     color: #222222ec;
     cursor: pointer;
     height: 90px;
@@ -115,7 +115,7 @@
 
   .zero {
     flex-basis: 52%;
-    border-radius: 50px;
+    border-radius: 20%;
   }
 
   .operator {
@@ -236,7 +236,7 @@
     font-size: 45px;
     height: 90px;
     width: 20px;
-    border-radius: 50%;
+    border-radius: 20%;
   }
 
   .zero {
@@ -317,7 +317,7 @@
     font-size: 50px;
     height: 120px;
     width: 30px;
-    border-radius: 50%;
+    border-radius: 20%;
   }
 
   .zero {
@@ -427,11 +427,11 @@
     font-size: 28px;
     height: 60px;
     width: 30px;
-    border-radius: 50%;
+    border-radius: 20%;
   }
 
   .zero {
-    border-radius: 60px;
+    border-radius: 80px;
   }
 
   h1 {
